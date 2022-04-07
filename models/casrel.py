@@ -9,7 +9,7 @@ class Casrel(nn.Module):
         super(Casrel, self).__init__()
         self.config = config
         self.bert_dim = 768
-        self.bert_encoder = BertModel.from_pretrained("/home/mhmd/projects/def-drafiei/mhmd/relation-extraction/CasRel-Torch/pretrained_models")
+        self.bert_encoder = BertModel.from_pretrained("bert-base-cased")
         self.sub_heads_linear = nn.Linear(self.bert_dim, 1)
         self.sub_tails_linear = nn.Linear(self.bert_dim, 1)
         self.obj_heads_linear = nn.Linear(self.bert_dim, self.config.rel_num)

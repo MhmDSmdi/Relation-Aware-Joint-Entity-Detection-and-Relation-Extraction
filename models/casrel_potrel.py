@@ -10,10 +10,10 @@ class CasrelPotentialRelation(nn.Module):
         super(CasrelPotentialRelation, self).__init__()
         self.config = config
         self.bert_dim = 768
-        self.bert_encoder = BertModel.from_pretrained("/home/mhmd/projects/def-drafiei/mhmd/relation-extraction/CasRel-Torch/pretrained_models")
+        self.bert_encoder = BertModel.from_pretrained("bert-base-cased")
         
         self.rel_linear = nn.Linear(self.bert_dim, self.config.rel_num)
-        with open(f"/home/mhmd/projects/def-drafiei/mhmd/relation-extraction/CasRel-Torch/data/{self.config.dataset}/relation_vectors", 'rb') as f:
+        with open(f"./data/{self.config.dataset}/relation_vectors", 'rb') as f:
           relation_vectors = np.load(f)
         self.rel_embedding = nn.Parameter(torch.from_numpy(relation_vectors).to(device='cuda:0'))
 

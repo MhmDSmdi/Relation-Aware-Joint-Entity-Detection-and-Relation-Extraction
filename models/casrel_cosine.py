@@ -10,10 +10,10 @@ class CasrelCosine(nn.Module):
         super(CasrelCosine, self).__init__()
         self.config = config
         self.bert_dim = 768
-        with open(f"/home/mhmd/projects/def-drafiei/mhmd/relation-extraction/CasRel-Torch/data/{self.config.dataset}/relation_vectors", 'rb') as f:
+        with open(f"./data/{self.config.dataset}/relation_vectors", 'rb') as f:
           relation_vectors = np.load(f)
         self.encoded_relations = torch.Tensor(relation_vectors)
-        self.bert_encoder = BertModel.from_pretrained("/home/mhmd/projects/def-drafiei/mhmd/relation-extraction/CasRel-Torch/pretrained_models")
+        self.bert_encoder = BertModel.from_pretrained("bert-base-cased")
         
         self.sub_heads_linear = nn.Linear(self.bert_dim, 1)
         self.sub_tails_linear = nn.Linear(self.bert_dim, 1)

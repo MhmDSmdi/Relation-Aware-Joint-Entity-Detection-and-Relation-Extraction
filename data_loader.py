@@ -7,7 +7,7 @@ from utils import get_tokenizer
 import numpy as np
 from random import choice
 
-tokenizer = get_tokenizer('/home/mhmd/projects/def-drafiei/mhmd/relation-extraction/CasRel-Torch/pretrained_models/vocab.txt')
+tokenizer = get_tokenizer('./vocab.txt')
 
 
 BERT_MAX_LEN = 128

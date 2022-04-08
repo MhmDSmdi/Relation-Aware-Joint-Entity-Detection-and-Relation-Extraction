@@ -8,7 +8,6 @@
 module purge
 module load python/3
 
-# export PYTHONPATH="/cvmfs/soft.computecanada.ca/custom/python/site-packages:/home/mhmd/projects/def-drafiei/mhmd/relation-extraction/CasRel-Torch"
 source ./env/bin/activate
 
 python ./train.py \

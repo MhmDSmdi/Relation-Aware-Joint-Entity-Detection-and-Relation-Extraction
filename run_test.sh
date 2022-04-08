@@ -8,7 +8,7 @@
 module purge
 module load python/3
 
-# export PYTHONPATH="/cvmfs/soft.computecanada.ca/custom/python/site-packages:/home/mhmd/projects/def-drafiei/mhmd/relation-extraction/CasRel-Torch"
+
 source ./env/bin/activate
 
 python ./test.py \
@@ -18,5 +18,5 @@ python ./test.py \
 --test_epoch=10 \
 --max_len=64 \
 --rel_num=171 \
---path="/home/mhmd/projects/def-drafiei/mhmd/relation-extraction/CasRel-Torch/final_experiments/WebNLG-Casrel_Rethinking-6/20220402130856/model_WebNLG" \
+--path="./checkpoints/model_rethinking" \
 --dataset="WebNLG" \

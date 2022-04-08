@@ -13,7 +13,7 @@ class CasrelCosine(nn.Module):
         with open(f"./data/{self.config.dataset}/relation_vectors", 'rb') as f:
           relation_vectors = np.load(f)
         self.encoded_relations = torch.Tensor(relation_vectors)
-        self.bert_encoder = BertModel.from_pretrained("bert-base-cased")
+        self.bert_encoder = BertModel.from_pretrained("bert-base-uncased")
         
         self.sub_heads_linear = nn.Linear(self.bert_dim, 1)
         self.sub_tails_linear = nn.Linear(self.bert_dim, 1)

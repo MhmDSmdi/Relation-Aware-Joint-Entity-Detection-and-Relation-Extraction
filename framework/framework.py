@@ -264,7 +264,7 @@ class Framework(object):
         model.eval()
         test_data_loader = data_loader.get_loader(self.config, prefix=self.config.test_prefix, is_test=True)
         precision, recall, f1_score = self.test(test_data_loader, model, '_test', True)
-        print("TEST SET: f1: {}, precision: {}, recall: {}".format(f1_score, precision, recall))
+        print("TEST SET: f1: {:.4f}, precision: {:.4f}, recall: {:.4f}".format(f1_score, precision, recall))
     
     def testComplete(self, model_pattern, path):
         model = model_pattern(self.config)

@@ -10,7 +10,7 @@ class CasrelPotentialRelation(nn.Module):
         super(CasrelPotentialRelation, self).__init__()
         self.config = config
         self.bert_dim = 768
-        self.bert_encoder = BertModel.from_pretrained("bert-base-cased")
+        self.bert_encoder = BertModel.from_pretrained("bert-base-uncased")
         
         self.rel_linear = nn.Linear(self.bert_dim, self.config.rel_num)
         with open(f"./data/{self.config.dataset}/relation_vectors", 'rb') as f:

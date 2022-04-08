@@ -5,12 +5,11 @@
 # Demo
 For replicating the reported results, you can simply open ``Run.ipynb`` in Google Colab or use [this link](https://colab.research.google.com/drive/1d54mwa3VGqHsMpTCV4pyjI2mEsWMF1gE?usp=sharing), and follow its instruction to replicate the results.
 # Use the trained model
-1. Download the necessary files like pre-trained models
-```
-# save pretrained models to checkpoints/
-# models will take about 1GB
-bash ./download_checkpoints.sh
-```
+1. Download the following files, which are our trained models, and put them in the /checkpoints directory.
+
+* Rethinking: [download](https://drive.google.com/file/d/1LG4EZqodlsOefmZD3p-DIqBV8B_A1_HM/view?usp=sharing)
+* CASREL: [download](https://drive.google.com/file/d/13s1OKnsjBUkAMuUwe_nEgT1Ua4gHfrMX/view?usp=sharing)
+
 2- Now, you can evaluate the model using the following bash command:
 ```
 python ./test.py \

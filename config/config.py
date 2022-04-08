@@ -14,22 +14,21 @@ class Config(object):
         self.rel_num = args.rel_num
         self.model_name = args.model_name
         self.saved_model = args.path
-        self.abl_emb = args.abl_emb
-        self.abl_rethink = args.abl_rethink
+        #self.abl_emb = args.abl_emb
+        #self.abl_rethink = args.abl_rethink
         
         # dataset
         self.dataset = args.dataset
 
         # path and name
-        self.root = '/home/mhmd/projects/def-drafiei/mhmd/relation-extraction/CasRel-Torch'
+        self.root = './'
         self.data_path = self.root + '/data/' + self.dataset
 
         self.train_prefix = "train_triples"
         self.dev_prefix = "dev_triples"
         self.test_prefix = args.test_prefix
 
-        now = datetime.now().strftime("%Y%m%d%H%M%S")
-        self.experiment_path = f"{self.root}/final_experiments/{self.dataset}-{self.model_name}-{self.batch_size}/{now}"
+        self.experiment_path = f"{self.root}/experiments/{self.dataset}-{self.model_name}-{self.batch_size}"
 
         if not os.path.exists(self.experiment_path):
           os.makedirs(self.experiment_path)

@@ -11,7 +11,7 @@ import json
 import time
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-tokenizer = get_tokenizer('/home/mhmd/projects/def-drafiei/mhmd/relation-extraction/CasRel-Torch/pretrained_models/vocab.txt')
+tokenizer = get_tokenizer('./vocab.txt')
 
 class Framework(object):
     def __init__(self, con):

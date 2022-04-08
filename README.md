@@ -3,7 +3,7 @@
 <p align="center"><img width="70%" src="https://raw.githubusercontent.com/MhmDSmdi/Relation-Aware-Joint-Entity-Detection-and-Relation-Extraction/main/figures/overview.png" /></p>
 
 # Demo
-For replicating the reported results, you can simply open ``Run.ipynb`` in Google Colab, and follow its instruction to replicate the results.
+For replicating the reported results, you can simply open ``Run.ipynb`` in Google Colab or use [this link](https://colab.research.google.com/drive/1d54mwa3VGqHsMpTCV4pyjI2mEsWMF1gE?usp=sharing), and follow its instruction to replicate the results.
 # Use the trained model
 1. Download the necessary files like pre-trained models
 ```

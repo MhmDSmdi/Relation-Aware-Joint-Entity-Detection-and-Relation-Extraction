@@ -1,0 +1,20 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) CCconfig      4) gcccore/.9.3.0     7) ucx/1.8.0
+  2) StdEnv/2020   5) imkl/2020.1.217    8) libfabric/1.10.1
+  3) gentoo/2020   6) intel/2020.1.217   9) openmpi/4.0.3
+Some weights of the model checkpoint at /home/mhmd/projects/def-drafiei/mhmd/relation-extraction/CasRel-Torch/pretrained_models were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.decoder.weight', 'cls.predictions.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+GPU is available.
+correct_num: 236, predict_num: 279, gold_num: 266
+test_triples_1 | TEST SET: f1: 0.87, precision: 0.85, recall: 0.89
+correct_num: 309, predict_num: 368, gold_num: 340
+test_triples_2 | TEST SET: f1: 0.87, precision: 0.84, recall: 0.91
+correct_num: 367, predict_num: 405, gold_num: 389
+test_triples_3 | TEST SET: f1: 0.92, precision: 0.91, recall: 0.94
+correct_num: 312, predict_num: 348, gold_num: 357
+test_triples_4 | TEST SET: f1: 0.89, precision: 0.90, recall: 0.87
+correct_num: 185, predict_num: 213, gold_num: 229
+test_triples_5 | TEST SET: f1: 0.84, precision: 0.87, recall: 0.81

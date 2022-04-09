@@ -22,17 +22,17 @@ python ./test.py \
 Several important options include:
 * `--model_name`: the model that is used, CASREL or Rethinking
 * `--path`: the path of the downloaded checkpoint
-* `--test_prefix`: the prefix of the data file that you want to evaluate the model (you can use any file name in data/WebNLG without the ``.json`` extension)
+* `--test_prefix`: the prefix of the data file that you want to evaluate the model with (you can use any file name in data/WebNLG without the ``.json`` extension)
 * `--dataset`: the dataset that you are using
 
-The expected results would be as follow:
+The expected results is as follows:
 ```
 correct_num: 1406, predict_num: 1572, gold_num: 1581
 f1: 0.8918, precision: 0.8944, recall: 0.8893
 ```
 
 # Train models from scratch
-You can train a model from scratch using the following bash command:
+You can train the model from scratch using the following bash command:
 ```
 python ./train.py \
 --model_name="Casrel_Rethinking" \
